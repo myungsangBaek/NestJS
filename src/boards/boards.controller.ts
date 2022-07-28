@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { Board } from './boards.model';
 import { BoardsService } from './boards.service';
 
@@ -9,5 +9,14 @@ export class BoardsController {
   @Get('/')
   getAllBoard(): Board[] {
     return this.boardsService.getAllBoards();
+  }
+
+  @Post()
+  //@Body("title") title = title 정보만 가져옴 express의 req.body 부분
+  createBoard(
+    @Body('title') title: string,
+    @Body('description') description: string,
+  ): Board {
+    return this.boardsService.createBoard(title, description);
   }
 }
