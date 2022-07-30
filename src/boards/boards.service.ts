@@ -28,7 +28,7 @@ export class BoardsService {
     const found = this.boards.find((board) => board.id === id);
 
     if (!found) {
-      throw new NotFoundException();
+      throw new NotFoundException(`${id}를 찾을 수 없습니다.`);
     }
 
     return found;
