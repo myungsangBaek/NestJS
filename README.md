@@ -8,6 +8,12 @@ yarn start:dev
 
 module -> controller -> service -> controller -> module
 
+### Nest.js
+
+Node.js 프레임워크로 express 위에서 돌아가는 프레임워크이다.
+
+NestJS는 구조와 순서 룰이 있어 큰 규모의 백엔드를 쉽게 만들 수 있다.
+
 ### Nest JS 모듈
 
 모듈은 `@Module()` 데코레이터로 주석이 달린 클래스, `@Module()` 데코레이터는 Nest가 애플리케이션 구조를 구성하는 데 사용하는 메타 데이터를 제공한다.
