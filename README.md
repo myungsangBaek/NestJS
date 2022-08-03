@@ -1,6 +1,8 @@
 ## Getting Stated
 
 ```bash
+npm i -g @nestjs/cli #cli 설치
+
 nest new [Project-Name]
 
 yarn start:dev
@@ -12,7 +14,9 @@ module -> controller -> service -> controller -> module
 
 Node.js 프레임워크로 express 위에서 돌아가는 프레임워크이다.
 
-NestJS는 구조와 순서 룰이 있어 큰 규모의 백엔드를 쉽게 만들 수 있다.
+NestJS는 구조와 순서 룰이 있어 잘 따르면 큰 규모의 백엔드를 쉽게 만들 수 있다.
+
+NestJS는 데코레이터를 사용하는데 데코레이터는 클래스에 함수 기능을 추가할 수 있다.
 
 ### Nest JS 모듈
 
