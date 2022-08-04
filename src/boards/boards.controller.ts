@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  Query,
   UsePipes,
 } from '@nestjs/common';
 import { ValidationTypes } from 'class-validator';
@@ -28,6 +29,10 @@ export class BoardsController {
   //@Body("title") title = title 정보만 가져옴 express의 req.body 부분
   createBoard(@Body() createBoardDto: CreateBoardDto): Board {
     return this.boardsService.createBoard(createBoardDto);
+  }
+  @Get('search')
+  getSearch(@Query('board') searchingBoard: string) {
+    return searchingBoard;
   }
 
   @Get('/:id')
